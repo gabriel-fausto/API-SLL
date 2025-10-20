@@ -19,7 +19,7 @@ public class BookController {
     }
 
     @GetMapping("/{id}")
-    public Book getBook(@PathVariable int id) {
+    public Book getBook(@PathVariable String id) {
         return bookService.getBook(id);
     }
 
@@ -28,13 +28,13 @@ public class BookController {
         return bookService.addBook(book);
     }
 
-    @PutMapping("/{id}")
-    public Book updateBook(@PathVariable int id, Book book) {
-        return bookService.updateBook(id, book);
+    @PutMapping("/")
+    public Book updateBook(Book book) {
+        return bookService.updateBook(book);
     }
 
     @DeleteMapping("/{id}")
-    public void deleteBook(@PathVariable int id) {
+    public void deleteBook(@PathVariable String id) {
         bookService.deleteBook(id);
     }
 }
