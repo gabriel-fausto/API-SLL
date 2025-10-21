@@ -14,13 +14,13 @@ import java.time.LocalDateTime;
 public class Book {
 
     @Id
-    private final String id;
-    private final String title;
-    private final String author;
-    private final String category;
-    private final String condition;
-    private final String type;
-    private final String description;
+    private String id;
+    private String title;
+    private String author;
+    private String category;
+    private String condition;
+    private String type;
+    private String description;
 
     @CreatedDate
     private LocalDateTime createdAt;
